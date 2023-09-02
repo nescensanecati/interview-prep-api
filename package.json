@@ -1,0 +1,29 @@
+{
+  "name": "interview-prep-api",
+  "version": "1.0.0",
+  "description": "Backend for the Interview-prep website (Brainstation Capstone Project)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Aleandro Malagon Diaz",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nescensanecati/interview-prep-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nescensanecati/interview-prep-api/issues"
+  },
+  "homepage": "https://github.com/nescensanecati/interview-prep-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "knex": "^2.5.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1"
+  }
+}
