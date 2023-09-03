@@ -2,6 +2,7 @@ const knex = require("knex")(require("../knexfile"));
 
 
 const getQuestion = (req, res) => {
+    if (req.params.question_id !== 'undefined') {
     knex("questions")
       .select(
         "questions.question_id",
@@ -19,8 +20,11 @@ const getQuestion = (req, res) => {
       })
       .catch((err) => {
         console.log(err);
-        res.status(500).json({ message: "Unable to get the inventory" });
-      });
+        res.status(500).json({ message: "Unable to get the question" });
+      });}
+      else {
+        res.status(400).json({ message: "Unable to get the question if param is undefined" })
+      }
   };
 
 
