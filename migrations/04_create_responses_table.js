@@ -4,7 +4,7 @@
  */
 exports.up = function (knex) {
     return knex.schema.createTable('responses', (table) => {
-      table.increments('response_id').primary();
+      table.integer('response_id')
       table.string('response').notNullable();
       table.boolean('is_correct')
       table
