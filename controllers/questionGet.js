@@ -9,10 +9,10 @@ const getQuestion = (req, res) => {
         "responses.response_id as response_id",
         "responses.response AS response",
         "responses.is_correct AS is_correct",
-        // "descriptions.description AS description",
+        "descriptions.description AS description",
       )
       .innerJoin("responses", "responses.question_id", "questions.question_id")
-      // .innerJoin("descriptions", "descriptions.question_id", "questions.question_id")
+      .innerJoin("descriptions", "descriptions.question_id", "questions.question_id")
       .where({ "questions.question_id": req.params.question_id })
       .then((data) => {
         res.status(200).json(data);

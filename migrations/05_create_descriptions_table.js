@@ -5,7 +5,7 @@
 exports.up = function (knex) {
     return knex.schema.createTable('descriptions', (table) => {
       table.increments('description_id').primary();
-      table.string('description').notNullable();
+      table.text('description').notNullable();
       table
       .integer('question_id')
       .unsigned()
